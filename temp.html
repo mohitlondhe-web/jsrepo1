@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+
+function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5/9;
+}
+
+
+let temperature = parseFloat(prompt("Enter a temperature:"));
+let unit = prompt("Enter the unit (C for Celsius, F for Fahrenheit):").toUpperCase();
+
+
+if (unit === 'C') {
+    let fahrenheit = celsiusToFahrenheit(temperature);
+    alert(`${temperature}°C is equal to ${fahrenheit.toFixed(1)}°F`);
+} else if (unit === 'F') {
+    let celsius = fahrenheitToCelsius(temperature);
+    alert(`${temperature}°F is equal to ${celsius.toFixed(1)}°C`);
+} else {
+    alert("Invalid unit entered. Please enter 'C' for Celsius or 'F' for Fahrenheit.");
+}
+    </script>
+</body>
+</html>
